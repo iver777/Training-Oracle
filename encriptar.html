@@ -1,0 +1,33 @@
+<html>
+<meta charset="UTF-8">
+<h1>Challenge Encriptar</h1>
+<input type="text" placeholder="ingresar texto " id="input-text"></br>
+<input type="Button" value="Encriptar" id="btn-encriptar">
+<input type="Button" value="Desencriptar" id="btn-desencriptar"></br>
+<input type="text" id="output-text">
+
+<script>
+
+function encriptar(){
+    
+var texto=document.querySelector("#input-text").value;
+var encriptado=texto.replace(/a/gi,"4").replace(/e/gi, "3").replace(/i/gi, "1").replace(/o/gi, "0").replace(/u/gi, "9");
+  
+   document.querySelector("#output-text").value=encriptado;
+   
+}
+var buttonEncriptar=document.querySelector("#btn-encriptar");
+buttonEncriptar.onclick=encriptar;
+
+function desencriptar(){
+var texto= document.querySelector("#input-text").value;
+var desencriptar=texto.replace(/4/gi, "a").replace(/3/gi, "e").replace(/1/gi, "i").replace(/0/gi, "o").replace(/9/gi, "u");
+   document.querySelector("#output-text").value=desencriptar;
+}
+buttonDesencriptar=document.querySelector("#btn-desencriptar");
+buttonDesencriptar.onclick=desencriptar;
+
+</script>
+</html>
+
+
